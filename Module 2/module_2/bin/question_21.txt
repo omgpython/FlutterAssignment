@@ -1,0 +1,3 @@
+Question -> What is inheritance?
+
+-> When a class acquires thr property of another class is known as "Inheritance".

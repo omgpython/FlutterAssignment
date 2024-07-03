@@ -1,0 +1,1 @@
+Question -> What will happen if a class implements two interfaces and they both have a method with same name and signature?

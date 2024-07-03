@@ -1,0 +1,1 @@
+Question -> What happens if the parent and the child class have a field with same identifier? B16. Are constructors and initializers also inherited to subclasses?

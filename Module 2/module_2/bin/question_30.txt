@@ -1,0 +1,1 @@
+Question -> Can we pass an object of a subclass to a method expecting an object of the super class? Are static members inherited to subclasses?

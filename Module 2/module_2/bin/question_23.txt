@@ -1,0 +1,1 @@
+Question -> Difference between inheritance and encapsulation. Difference between inheritance and abstraction.
