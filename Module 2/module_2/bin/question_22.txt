@@ -1,28 +1,16 @@
 Question -> Which inheritance is not supported by Dart? Why? What is advantage of inheritance?
 
--> In Dart, multiple inheritance is not supported. This restriction is in place to avoid the
-   complexities and ambiguities that arise from multiple inheritance, such as the "diamond problem",
-   where a class can inherit the same method or property from multiple base classes, leading to potential
-   conflicts and confusion.
+-> In Dart, Multiple Inheritance is not supported
+
+-> because, the same variable name and same method name in parent class is confusing the compiler.
+
+-> suppose class C is inherit class A,B. The class A and B has one same method name "print_data()". when
+   we call print_data() method though object of class C the compiler will confuse class A method called or
+   class B method called.
 
 -> but, We can achieve multiple inheritance using interface.
 
 ⭐ Advantages of inheritance :-
 
-    1. Code Reusability
-    2. Extensibility
-    3. Polymorphism
-    4. Hierarchy and Organization
-
-    1) Code Reusability :- Inheritance allows a new class to reuse the properties and methods of an
-                           existing class, reducing code duplication.
-
-    2) Extensibility :-  By inheriting from a base class, new functionality can be added to existing
-                         code without modifying it, enhancing flexibility and maintainability.
-
-    3) Polymorphism :-  Inheritance supports polymorphism, allowing objects of different classes to be
-                        treated as objects of a common superclass. This enables the writing of more
-                        generic and reusable code.
-
-    4) Hierarchy and Organization :-  Inheritance provides a natural way to organize classes into a
-                                      hierarchy, making the system easier to understand and manage.
+    Code Reusability :- Inheritance allows a new class to reuse the properties and methods of an
+                        existing class, reducing code duplication.
