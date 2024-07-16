@@ -1,3 +1,39 @@
 Question -> Difference between inheritance and polymorphism.
 
-->
+⭐ Inheritance :
+
+    -> The Class acquires the property of parent class it's called "Inheritance."
+
+    -> Types of inheritance:
+        1) Single Inheritance
+        2) Multiple Inheritance
+        3) Multi Level Inheritance
+        4) Hybrid Inheritance
+        5) Hierarchical Inheritance
+       Note: Multiple Inheritance is not supported by Dart, but we archive with the using of Interface.
+
+    -> purpose of inheritance is "Code re-usability."
+
+    -> we can inherit the parent class using "extend" keyword.
+
+
+⭐ Polymorphism :
+
+    -> The word Polymorphism has been derived from greek words "Poly" and "Morph." where Poly means Many
+       and Morph means Form.
+
+    -> Polymorphism means an object has different form, and each different form performs the same
+       action/task in different/multiple ways.
+
+    -> Polymorphism is generally used to access private variables and methods.
+
+    -> Types of Polymorphism:
+
+        1) Method Overloading: The method who has the same name but different parameters in the same
+                               class it's called "Method Overloading."
+
+        2) Method Overriding: The method who has the same name and the same parameters but in different
+                              class it's called "Method Overriding."
+
+        Note: Method Overloading is not supported by Dart.
+

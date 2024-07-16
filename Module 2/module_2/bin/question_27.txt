@@ -1,1 +1,1 @@
-Question -> Can a class implement more than one interface? B10. Can a class extend more than one class in Dart?
+Question -> Can a class implement more than one interface? Can a class extend more than one class in Dart?
