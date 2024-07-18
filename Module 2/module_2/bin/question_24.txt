@@ -25,8 +25,6 @@ Question -> Difference between inheritance and polymorphism.
     -> Polymorphism means an object has different form, and each different form performs the same
        action/task in different/multiple ways.
 
-    -> Polymorphism is generally used to access private variables and methods.
-
     -> Types of Polymorphism:
 
         1) Method Overloading: The method who has the same name but different parameters in the same
