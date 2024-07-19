@@ -1,1 +1,5 @@
 Question -> What happens when a class implements two interfaces and both declare field (variable) with the same name?
+
+-> The variable are override once when two interface has same field name when implement interface.
+
+-> Both interface variable value are same when overridden.

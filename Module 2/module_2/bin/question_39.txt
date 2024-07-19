@@ -1,1 +1,9 @@
 Question -> What are the rules of method overriding in Dart?
+
+-> The method name same and signature as parent class.
+
+-> Class must be inherited.
+
+-> Method must be in a parent class.
+
+-> @override must be used before overriding method.

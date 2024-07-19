@@ -1,1 +1,3 @@
 Question -> Can a class extend by itself in Dart?
+
+-> In Dart, We can inherit only one class to other class. So, We cannot extend class by itself.

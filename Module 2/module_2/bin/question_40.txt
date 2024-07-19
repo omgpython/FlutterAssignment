@@ -1,1 +1,11 @@
 Question -> Difference between method overriding and overloading in Dart.
+
+⭐Method Overloading:
+
+-> A method who has the same name but different parameters in the same class it's called "Method Overloading."
+
+note: Method Overloading not supported by Dart.
+
+⭐Method Overriding:
+
+-> A method who has the same name and same parameters but different class it's called "Method Overriding."

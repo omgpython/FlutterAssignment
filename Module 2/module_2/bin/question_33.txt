@@ -1,1 +1,18 @@
 Question -> How do you implement multiple inheritance in Dart?
+
+-> We can achieve multiple inheritance using concept of interface.
+
+⭐Example:
+
+class A {
+    // code for class A
+}
+class B {
+    // code for class B
+}
+class C implements A, B {
+    //code for class C
+}
+void main() {
+    C obj = C();
+}

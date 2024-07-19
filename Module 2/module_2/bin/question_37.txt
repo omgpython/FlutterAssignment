@@ -1,1 +1,5 @@
 Question -> What the order is of extends and implements keyword on Dart class declaration?
+
+-> In Dart, extends is used to inherit classes. Give all property of parent class to child class.
+
+-> In Dart, implement is used to interfaces. Give all property to interface to classes.

@@ -1,1 +1,5 @@
 Question -> How do you override a private method in Dart?
+
+-> We can override private method just like a public method.
+
+-> Using extend class to child class and give method name same as parent class.

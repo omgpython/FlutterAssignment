@@ -1,1 +1,3 @@
 Question -> How do you restrict a member of a class from inheriting by its subclasses?
+
+-> We can restrict a member of a class from inheriting by its subclasses using 'final' keyword.

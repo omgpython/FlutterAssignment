@@ -1,1 +1,6 @@
 Question -> Can we pass an object of a subclass to a method expecting an object of the super class? Are static members inherited to subclasses?
+
+-> We can access all methods and members of superclass using object of subclass.
+-> This archived using 'extends' keyword.
+
+-> Static member cannot inherit to subclass. Because it's class-level member.

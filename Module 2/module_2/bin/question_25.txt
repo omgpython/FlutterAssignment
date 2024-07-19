@@ -1,1 +1,3 @@
 Question -> Can we override static method in Dart?
+
+-> It is not possible override a method that has been declared static in parent class.

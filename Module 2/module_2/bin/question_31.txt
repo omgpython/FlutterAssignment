@@ -1,1 +1,9 @@
-Question -> What happens if the parent and the child class have a field with same identifier? B16. Are constructors and initializers also inherited to subclasses?
+Question -> What happens if the parent and the child class have a field with same identifier? Are constructors and initializers also inherited to subclasses?
+
+-> If parent and child class have same fields with same identifier the field called who's object is created.
+-> The object was created of child class its call identifier of his class.
+-> If we want to call identifier of parent class using child class object so, we can use 'super' keyword.
+
+
+-> The constructors and initializers of parent class is not inherit in child class.
+-> We can use constructors and initializers of parent class using 'super' keyword.
