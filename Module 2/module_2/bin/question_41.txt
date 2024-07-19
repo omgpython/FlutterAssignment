@@ -1,0 +1,1 @@
+Question -> What happens when a class implements two interfaces and both declare field (variable) with the same name?

@@ -1,0 +1,1 @@
+Question -> Can a subclass static method hide superclass instance method?
