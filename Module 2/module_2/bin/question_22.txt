@@ -4,7 +4,7 @@ Question -> Which inheritance is not supported by Dart? Why? What is advantage o
 
 -> because, the same variable name and same method name in parent class is confusing the compiler.
 
--> suppose class C is inherit class A,B. The class A and B has one same method name "print_data()". when
+-> suppose class C is inherited class A,B. The class A and B has one same method name "print_data()". when
    we call print_data() method though object of class C the compiler will confuse class A method called or
    class B method called.
 

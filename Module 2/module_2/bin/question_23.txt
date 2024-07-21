@@ -1,2 +1,18 @@
 Question -> Difference between inheritance and encapsulation. Difference between inheritance and abstraction.
 
+⭐ Inheritance :
+
+    -> The Class acquires the property of parent class it's called "Inheritance."
+
+    -> Types of inheritance:
+        1) Single Inheritance
+        2) Multiple Inheritance
+        3) Multi Level Inheritance
+        4) Hybrid Inheritance
+        5) Hierarchical Inheritance
+       Note: Multiple Inheritance is not supported by Dart, but we archive with the using of Interface.
+
+    -> purpose of inheritance is "Code re-usability."
+
+    -> we can inherit the parent class using "extend" keyword.
+

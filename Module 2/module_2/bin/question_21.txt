@@ -1,3 +1,5 @@
 Question -> What is inheritance?
 
 -> When a class acquires the property of another class is known as "Inheritance".
+
+-> We can inherit class using "extends" keyword.
