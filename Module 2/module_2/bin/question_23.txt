@@ -16,3 +16,42 @@ Question -> Difference between inheritance and encapsulation. Difference between
 
     -> we can inherit the parent class using "extend" keyword.
 
+
+⭐ Encapsulation :
+
+    -> To get or set member value of class we crate a getter and setter methods it's called "encapsulation".
+
+    -> Getter method gives the value of the member.
+
+    -> Setter method sets the value of the member.
+
+    -> Dart has by default getter and setter method.
+
+    -> But, to get and set the value of private member or member access in outside own dart file we can create
+       getter and setter method.
+
+
+⭐ Abstraction :
+
+    -> to create classes that define a template for other classes without providing a complete
+       implementation it's called "Abstraction".
+
+    -> Abstract class or method :
+
+        -> A method without body it's called "Abstract Method."
+
+        -> Abstract method must contain in an abstract class.
+
+        -> "abstract" keyword is used to create abstract keyword.
+
+        -> Abstract class must be inherited to other class.
+
+    -> Interface :
+
+        -> An interface defines a set of methods for an object.
+
+        -> "implement" keyword is used to inherit a class.
+
+        -> We achieve multiple inheritance using interface.
+
+        ->  All methods are must override in child class.
