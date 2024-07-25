@@ -2,4 +2,4 @@ Question -> Can a subclass instance method override a superclass static method?
 
 -> A subclass instance method cannot override a superclass static method
 
--> Because, 
+-> Because, The static method generated only one copy for all objects so, We cannot override static method
