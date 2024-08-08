@@ -1,3 +1,6 @@
 Question -> Can an interface extend more than one interface in Dart?
 
-->
+-> No, interface cannot extend more than one interface.
+
+-> Because, interface is a class not a special keyword for the interface. Class cannot extend more than one
+   class.
