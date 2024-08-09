@@ -1,1 +1,5 @@
 Question -> When to overload a method in Dart and when to override it?
+
+-> when we need to method same name and same class but parameter are different so, we use method overloading.
+
+-> when we need to change definition of parent class so, we use method overriding.

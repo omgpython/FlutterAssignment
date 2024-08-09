@@ -1,1 +1,15 @@
 Question -> Difference between object-oriented and object based language.
+
+⭐ Object Based Language :
+    -> A programming language allows you to create and use objects but doesn't support necessarily oops
+       concept like inheritance, polymorphism, Encapsulation, Abstraction that language is
+       "Object Based Language".
+
+    -> Example:- C Language, Java Script.
+
+⭐ Object Oriented Language :
+
+    -> A programming language allows you to create and use objects and supports all oops concept like
+       inheritance, polymorphism, Encapsulation, Abstraction that language is "Object Oriented Language".
+
+    -> Example:- C++, Java, Dart.
