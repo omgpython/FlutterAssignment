@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 
-String oprator = "", result = "";
+String oprator = "+", result = "";
 
 void main() => runApp(MyApp());
 
@@ -12,6 +12,9 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
+  final number1Controller = TextEditingController();
+  final number2Controller = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -27,16 +30,23 @@ class _MyAppState extends State<MyApp> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               TextField(
+                controller: number1Controller,
                 decoration: InputDecoration(
                   labelText: 'Enter No. 1',
-                  border: OutlineInputBorder(),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(14),
+                  ),
                 ),
               ),
               SizedBox(height: 16),
               TextField(
+                controller: number2Controller,
+                keyboardType: TextInputType.number,
                 decoration: InputDecoration(
                   labelText: 'Enter No. 2',
-                  border: OutlineInputBorder(),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(14),
+                  ),
                 ),
               ),
               SizedBox(height: 16),
@@ -109,15 +119,31 @@ class _MyAppState extends State<MyApp> {
                 ],
               ),
               SizedBox(height: 16),
-              Row(
-                children: [
-                  Expanded(
-                    child: ElevatedButton(
-                      onPressed: () {},
-                      child: Text("Calculate"),
-                    ),
-                  )
-                ],
+              SizedBox(
+                width: double.infinity,
+                child: FilledButton(
+                  onPressed: () {
+                    setState(() {
+                      int num1 = int.parse(number1Controller.text.trim());
+                      int num2 = int.parse(number2Controller.text.trim());
+
+                      if (oprator == "+") {
+                        result =
+                            "The Addition of $num1 and $num2 is ${num1 + num2}";
+                      } else if (oprator == "-") {
+                        result =
+                            "The Subtraction of $num1 and $num2 is ${num1 - num2}";
+                      } else if (oprator == "*") {
+                        result =
+                            "The Multiplication of $num1 and $num2 is ${num1 * num2}";
+                      } else if (oprator == "/") {
+                        result =
+                            "The Division of $num1 and $num2 is ${num1 / num2}";
+                      }
+                    });
+                  },
+                  child: Text("Calculate"),
+                ),
               ),
               SizedBox(height: 16),
               Text(

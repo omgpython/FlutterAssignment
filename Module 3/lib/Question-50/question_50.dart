@@ -10,10 +10,14 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   String result = '';
+
+  final numberController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Reverse Number',
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
           title: Center(child: Text('Reverse Number')),
@@ -24,6 +28,8 @@ class _MyAppState extends State<MyApp> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               TextField(
+                controller: numberController,
+                keyboardType: TextInputType.number,
                 decoration: InputDecoration(
                   labelText: 'Enter Number',
                   border: OutlineInputBorder(
@@ -32,17 +38,23 @@ class _MyAppState extends State<MyApp> {
                 ),
               ),
               SizedBox(height: 16),
-              ElevatedButton(
-                onPressed: () {},
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.deepPurple,
-                  minimumSize:
-                      Size(double.infinity, 50), // Set minimum width and height
-                ),
-                child: Text(
-                  "Reverse Number",
-                  style: TextStyle(
-                    color: Colors.white,
+              SizedBox(
+                width: double.infinity,
+                child: FilledButton(
+                  onPressed: () {
+                    setState(() {
+                      String number = numberController.text.trim();
+                      result = "Reverse Number : ";
+                      for (int i = number.length - 1; i >= 0; i--) {
+                        result += number[i];
+                      }
+                    });
+                  },
+                  child: Text(
+                    "Reverse Number",
+                    style: TextStyle(
+                      color: Colors.white,
+                    ),
                   ),
                 ),
               ),
