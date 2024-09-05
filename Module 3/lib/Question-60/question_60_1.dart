@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors, avoid_unnecessary_containers
+// ignore_for_file: prefer_const_constructors, avoid_unnecessary_containers, sized_box_for_whitespace
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
@@ -15,7 +15,15 @@ class _MyAppState extends State<MyApp> {
       title: 'Restaurant',
       debugShowCheckedModeBanner: false,
       home: Scaffold(
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {},
+          backgroundColor: Colors.amber,
+          shape: CircleBorder(),
+          tooltip: "Cart",
+          child: Icon(Icons.shopping_bag_outlined),
+        ),
         body: SingleChildScrollView(
+          scrollDirection: Axis.vertical,
           child: Padding(
             padding: const EdgeInsets.all(20.0),
             child: Column(
@@ -125,9 +133,145 @@ class _MyAppState extends State<MyApp> {
                     ],
                   ),
                 ),
+                SizedBox(height: 10),
+                SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    children: [
+                      customContainer(
+                        text: "Recommended",
+                        bgColor: Colors.amber,
+                        txtColor: Colors.white,
+                      ),
+                      customContainer(text: "Popular"),
+                      customContainer(text: "Noodles"),
+                      customContainer(text: "Pizza"),
+                      customContainer(text: "Pasta"),
+                    ],
+                  ),
+                ),
+                SizedBox(height: 20),
+                foodItems(
+                  imagePath: 'assets/images/soba_soup.png',
+                  dishName: 'Soba Soup',
+                  description: 'No1. on Sales',
+                  descriptionColor: Colors.amber,
+                  price: 12,
+                ),
+                SizedBox(height: 20),
+                foodItems(
+                  imagePath: 'assets/images/samun_phrai.png',
+                  dishName: "Sei Ua Samun Phrai",
+                  description: "No1. in Sale",
+                  price: 12,
+                ),
+                SizedBox(height: 20),
+                foodItems(
+                  imagePath: 'assets/images/ratatoullie_pasta.png',
+                  dishName: "Ratatoullie Pasta",
+                  description: "No1. in Sale",
+                  price: 12,
+                ),
               ],
             ),
           ),
+        ),
+      ),
+    );
+  }
+
+  Widget customContainer(
+      {Color bgColor = Colors.white,
+      Color txtColor = Colors.black,
+      required String text}) {
+    return Padding(
+      padding: const EdgeInsets.all(10),
+      child: Container(
+        decoration: BoxDecoration(
+          color: bgColor,
+          borderRadius: BorderRadius.circular(20),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.grey,
+              blurRadius: 10,
+            ),
+          ],
+        ),
+        child: Padding(
+          padding: const EdgeInsets.all(10.0),
+          child: Text(
+            text,
+            style: TextStyle(
+              color: txtColor,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+
+  Widget foodItems({
+    required String imagePath,
+    required String dishName,
+    required String description,
+    required int price,
+    Color descriptionColor = Colors.black,
+  }) {
+    return Container(
+      width: double.infinity,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(20),
+        color: Colors.white,
+        boxShadow: [
+          BoxShadow(
+            color: Colors.grey,
+            blurRadius: 10,
+          )
+        ],
+      ),
+      child: Padding(
+        padding: const EdgeInsets.all(15.0),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Row(
+              children: [
+                CircleAvatar(
+                  radius: 50,
+                  backgroundImage: AssetImage(imagePath),
+                ),
+                SizedBox(width: 20),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      dishName,
+                      style: TextStyle(
+                        fontSize: 22,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    Text(
+                      description,
+                      style: TextStyle(
+                        fontSize: 16,
+                        color: descriptionColor,
+                      ),
+                    ),
+                    Text(
+                      '\$ $price',
+                      style: TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            ),
+            Icon(Icons.keyboard_arrow_right, size: 40)
+          ],
         ),
       ),
     );
