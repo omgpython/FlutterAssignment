@@ -1,4 +1,4 @@
-// ignore_for_file: use_key_in_widget_constructors, prefer_const_constructors
+// ignore_for_file: use_key_in_widget_constructors, prefer_const_constructors, avoid_unnecessary_containers, sized_box_for_whitespace, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
 
@@ -9,6 +9,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Alert Dialog',
+      debugShowCheckedModeBanner: false,
       home: HomePage(),
     );
   }
@@ -24,11 +25,15 @@ class HomePage extends StatelessWidget {
         title: Text('Material App Bar'),
       ),
       body: Center(
-        child: FilledButton(
-          onPressed: () {
-            _showAlertDialog(context);
-          },
-          child: Text('Show Alert Dialog'),
+        child: Container(
+          padding: EdgeInsets.symmetric(horizontal: 30),
+          width: double.infinity,
+          child: FilledButton(
+            onPressed: () {
+              _showAlertDialog(context);
+            },
+            child: Text('Show Alert Dialog'),
+          ),
         ),
       ),
     );
@@ -38,7 +43,11 @@ class HomePage extends StatelessWidget {
     showDialog(
       context: context,
       builder: (context) {
-        return AlertDialog();
+        return AlertDialog(
+          title: Text('Alert Dialog Tittle'),
+          content: Text('Alert Dialog Description'),
+          icon: Icon(Icons.home),
+        );
       },
     );
   }
