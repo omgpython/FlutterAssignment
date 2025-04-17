@@ -8,8 +8,8 @@ plugins {
 android {
     namespace = "com.example.module_4"
     compileSdk = flutter.compileSdkVersion
-    ndkVersion = flutter.ndkVersion
-
+    ndkVersion = "27.0.12077973"
+//    ndkVersion = flutter.ndkVersion
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
@@ -37,6 +37,10 @@ android {
             signingConfig = signingConfigs.debug
         }
     }
+
+//    dependencies {
+//        implementation 'com.android.tools:desugar_jdk_libs:2.1.5'
+//    }
 }
 
 flutter {
