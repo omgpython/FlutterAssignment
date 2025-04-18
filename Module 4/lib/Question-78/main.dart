@@ -34,7 +34,7 @@ class _HomeScreenState extends State<HomeScreen> {
         return AlertDialog(
           title: Text('Name'),
           content: Text(name),
-          actions: <Widget>[
+          actions: [
             TextButton(
               child: Text('OK'),
               onPressed: () {
