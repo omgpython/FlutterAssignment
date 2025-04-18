@@ -13,17 +13,17 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: NameListScreen(),
+      home: HomeScreen(),
     );
   }
 }
 
-class NameListScreen extends StatefulWidget {
+class HomeScreen extends StatefulWidget {
   @override
-  _NameListScreenState createState() => _NameListScreenState();
+  _HomeScreenState createState() => _HomeScreenState();
 }
 
-class _NameListScreenState extends State<NameListScreen> {
+class _HomeScreenState extends State<HomeScreen> {
   final List<String> names = [];
   final TextEditingController controller = TextEditingController();
 
